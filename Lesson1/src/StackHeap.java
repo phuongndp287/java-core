@@ -24,15 +24,19 @@ public class StackHeap {
 
     /**
      * Giải thích lại thông tin các biến và và object sẽ được lưu trữ ở đâu.
+	s được lưu trữ trong String pool.
+	n được lưu trữ ở bộ nhớ Stack.
+	Object được lưu trữ ở bộ nhớ Heap.
+
      *
      * @param args
      */
     public static void main(String[] args) {
         int n = 10;
         String s = "Initial";
-        System.out.println("Before constructor: s=" + s);
-        StackHeap stackHeap2 = new StackHeap(s, n);
-        System.out.println("After constructor: stackHeap2=" + stackHeap2);
+        System.out.println("Before constructor: s=" + s); //"Initial"
+        StackHeap stackHeap2 = new StackHeap(s, n); 
+        System.out.println("After constructor: stackHeap2=" + stackHeap2); //(Initial2, 0)
         System.out.println("After constructor: s=" + s);
         s = stackHeap2.changeString("TEST");
         System.out.println("After changeString(\"TEST\"): s=" + s);
