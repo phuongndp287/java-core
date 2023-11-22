@@ -25,7 +25,7 @@ public class SmileyFactored {
     public static void main(String[] args) {
         // Giai thich chuong trinh se chay nhu the nao ?
         SmileyFactored obj = new SmileyFactored();
-        obj.simpleDisplay();
-        staticDisplay();
+        obj.simpleDisplay(); //10; 50
+        staticDisplay(); //40; FSOFT
     }
 }
