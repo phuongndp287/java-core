@@ -3,7 +3,8 @@ public class Main {
         int data = 50;
 
         void change(int data) {
-            this.data = data + 100;
+
+           return data = data + 100;
         }
 
     }
@@ -25,12 +26,5 @@ public class Main {
         op.change(500);
         //op.change(500) = 600 là biến cục bộ không làm thay đổi giá trị op.data
         System.out.println("Sau khi thay đổi Operation1: " + op.data);
-        //op.data = 50
-        Operation2 op2 = new Operation2();
-        System.out.println("Trước khi thay đổi Operation2: " + op2.data);
-        //op2.data = 50
-        op2.change(op2);
-        //op2.change(op2) = 150 => Object op2 gọi đến data và thay đổi giá trị op2.data
-        System.out.println("Sau khi thay đổi Operation2: " + op2.data);
     }
 }

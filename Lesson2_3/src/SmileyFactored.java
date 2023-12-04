@@ -1,9 +1,10 @@
 public class SmileyFactored {
-    static int a = 40;
+    static final int a = 40;
     static final Company company = Company.FSOFT;
     int b = 50;
 
     static {
+        System.out.println("Run block static "+ a);
         a = 9;
 //        company = Company.CMC_GLOBAL;
     }
