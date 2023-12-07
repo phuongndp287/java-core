@@ -37,13 +37,17 @@ public class CompactDiscService implements ICompactDiscService {
     }
 
     @Override
-    public List<CompactDiscVo> orderDescByPrice(List<CompactDiscVo> compactDiscList) {
-        return compactDiscList.sort(Comparator.comparingDouble(CompactDiscVo::getPrice).reversed());
+    public void orderDescByPrice(List<CompactDiscVo> compactDiscList) {
+        if (!compactDiscList.isEmpty()) {
+            compactDiscList.sort(Comparator.comparingDouble(CompactDiscVo::getPrice).reversed());
+        }
     }
 
     @Override
-    public List<CompactDiscVo> orderAscByTitle(List<CompactDiscVo> compactDiscList) {
-        return compactDiscList.sort(Comparator.comparing(CompactDiscVo::getName));
+    public void orderAscByTitle(List<CompactDiscVo> compactDiscList) {
+        if (!compactDiscList.isEmpty()) {
+            compactDiscList.sort(Comparator.comparing(CompactDiscVo::getName));
+        }
     }
 
     @Override
